@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cmgtm2xk76ftp"]
+
+[ext_resource type="Script" uid="uid://3i0wm0k3ryfm" path="res://scripts/aula01.gd" id="1_tmi6u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gsr7l"]
+radius = 21.0
+height = 74.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gsr7l"]
+size = Vector2(122.5, 20)
+
+[node name="aula01" type="Node2D" unique_id=1235930597]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=684963983]
+script = ExtResource("1_tmi6u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=504050544]
+position = Vector2(26, 33)
+shape = SubResource("CapsuleShape2D_gsr7l")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1756406808]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=827866604]
+position = Vector2(64.75, 108)
+shape = SubResource("RectangleShape2D_gsr7l")

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://p4dq001hscpe"]
+
+[ext_resource type="Script" uid="uid://cm23dycl0fcw5" path="res://scripts/player.gd" id="1_merdl"]
+[ext_resource type="Texture2D" uid="uid://bkgik80gyojvq" path="res://sprites/Sprite Pack 6/1 - Penguin/Standing (16 x 16).png" id="2_b0kkn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gsr7l"]
+radius = 5.0
+height = 14.0
+
+[node name="Player" type="CharacterBody2D" unique_id=1716256280]
+position = Vector2(2, 2)
+script = ExtResource("1_merdl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1506138392]
+position = Vector2(63, 27)
+shape = SubResource("CapsuleShape2D_gsr7l")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=2094662420]
+texture = ExtResource("2_b0kkn")
