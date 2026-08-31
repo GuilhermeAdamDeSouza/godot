@@ -1,8 +1,30 @@
 [gd_scene format=3 uid="uid://b2ivj4dyhq64n"]
 
-[ext_resource type="Script" uid="uid://bjunq8h7mbblt" path="res://scripts/camera.gd" id="1_k0jm6"]
+[sub_resource type="GDScript" id="GDScript_cigyu"]
+script/source = "extends Camera2D 
 
-[node name="Camera2D" type="Camera2D" unique_id=1673570123]
+var alvo: Node2D 
+func _ready() -> void: 
+	buscar_alvo() 
+	if alvo != null: 
+# Sem esta linha, a câmera faz um voo desde a origem no primeiro quadro. 
+		global_position = alvo.global_position 
+func _physics_process(_delta: float) -> void: 
+	if alvo == null: 
+				return 
+	global_position = alvo.global_position 
+func buscar_alvo() -> void: 
+	var nos := get_tree().get_nodes_in_group(\"player\") 
+	if nos.is_empty(): 
+			push_error(\"Camera2D: nenhum nó no grupo 'player'\") 
+			return 
+	alvo = nos[0] 
+"
+
+[node name="Camera2D" type="Camera2D" unique_id=2135336072]
 limit_left = 0
-limit_bottom = 208
-script = ExtResource("1_k0jm6")
+limit_top = -144
+limit_right = 912
+limit_bottom = 144
+position_smoothing_enabled = true
+script = SubResource("GDScript_cigyu")

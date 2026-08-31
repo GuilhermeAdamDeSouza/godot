@@ -1,0 +1,114 @@
+[gd_scene format=4 uid="uid://duvhe6lbi5d1i"]
+
+[ext_resource type="PackedScene" uid="uid://bgyq8fcuv3h48" path="res://entities/player.tscn" id="1_j8cmn"]
+[ext_resource type="PackedScene" uid="uid://ccblsfexxgh3s" path="res://scenes/camera_2d.tscn" id="2_mtmls"]
+[ext_resource type="TileSet" uid="uid://clak3lmiwlkah" path="res://tiles/terrain.tres" id="3_mtmls"]
+[ext_resource type="TileSet" uid="uid://t1d78046hnid" path="res://tiles/decoration.tres" id="4_o55n4"]
+[ext_resource type="Texture2D" uid="uid://dvi3uay3sr5e0" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/5 - Sky_color.png" id="5_63ryy"]
+[ext_resource type="Texture2D" uid="uid://dod5oky4l2ygh" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/3 - Floating_clouds.png" id="6_wyuaa"]
+[ext_resource type="Texture2D" uid="uid://0re4dcniqvcw" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/4 - Background_clouds.png" id="7_ttii7"]
+[ext_resource type="Texture2D" uid="uid://b84r44xk4ikdc" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/1 - Waters_version_1.png" id="8_tqg4o"]
+[ext_resource type="Texture2D" uid="uid://1xpqcarjw128" path="res://sprites/Seasonal Tilesets/3 - Tropics/Background parts/2 - Waters_version_2.png" id="9_wyuaa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_63ryy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_tqg4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wyuaa")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tropic" type="Node2D" unique_id=1428809501]
+
+[node name="Player" parent="." unique_id=516898779 instance=ExtResource("1_j8cmn")]
+
+[node name="Camera2D" parent="Player" unique_id=1848709811 instance=ExtResource("2_mtmls")]
+
+[node name="Terrain" type="TileMapLayer" parent="." unique_id=1721360471]
+position = Vector2(0, -16)
+tile_map_data = PackedByteArray("AAABAAwACgAEAAEAAAACAAwACgAEAAEAAAADAAwACgAEAAEAAAAEAAwACgAEAAEAAAAFAAwACgAEAAEAAAAGAAwACgAEAAEAAAAHAAwACgAEAAEAAAAAAAwACgADAAEAAAAIAAwACgAFAAEAAAALAAwACgADAAEAAAAMAAwACgAEAAEAAAANAAwACgAEAAEAAAAOAAwACgAEAAEAAAAPAAwACgAEAAEAAAAQAAwACgAEAAEAAAARAAwACgAEAAEAAAASAAwACgAEAAEAAAATAAwACgAFAAEAAAAYAAwACgAEAAEAAAAZAAwACgAEAAEAAAAaAAwACgAEAAEAAAAbAAwACgAEAAEAAAAcAAwACgAEAAEAAAAdAAwACgAEAAEAAAAeAAwACgAEAAEAAAAfAAwACgAEAAEAAAAXAAwACgADAAEAAAAgAAwACgAFAAEAAAAAAA0ACgADAAIAAAABAA0ACgAEAAIAAAACAA0ACgAEAAIAAAADAA0ACgAEAAIAAAAEAA0ACgAEAAIAAAAFAA0ACgAEAAIAAAAGAA0ACgAEAAIAAAAHAA0ACgAEAAIAAAAIAA0ACgAFAAIAAAAMAA0ACgAEAAIAAAANAA0ACgAEAAIAAAAOAA0ACgAEAAIAAAAPAA0ACgAEAAIAAAAQAA0ACgAEAAIAAAARAA0ACgAEAAIAAAASAA0ACgAEAAIAAAATAA0ACgAFAAIAAAALAA0ACgADAAIAAAAXAA0ACgADAAIAAAAYAA0ACgAEAAIAAAAZAA0ACgAEAAIAAAAaAA0ACgAEAAIAAAAbAA0ACgAEAAIAAAAcAA0ACgAEAAIAAAAdAA0ACgAEAAIAAAAeAA0ACgAEAAIAAAAfAA0ACgAEAAIAAAAgAA0ACgAFAAIAAAAYAAkACgAPAAMAAAAaAAcACgAPAAMAAAAcAAYACgAPAAMAAAAfAAYACgAPAAMAAAAhAAUACgAPAAMAAAAjAAMACgAPAAMAAAAmAAMACgAEAAEAAAAnAAMACgAEAAEAAAAoAAMACgAEAAEAAAApAAMACgAFAAEAAAAlAAMACgADAAEAAAArAAIACgAPAAMAAAAtAAEACgAPAAMAAAAvAAAACgAPAAMAAAAxAP//CgAPAAMAAAAzAP7/CgAPAAMAAAA1AP7/CgAEAAEAAAA2AP7/CgAEAAEAAAA3AP7/CgAEAAEAAAA4AP7/CgAEAAEAAAA5AP7/CgAEAAEAAAA=")
+tile_set = ExtResource("3_mtmls")
+
+[node name="Decoration" type="TileMapLayer" parent="." unique_id=1360609559]
+tile_map_data = PackedByteArray("AAAJAAwABwAMAAUAAAAJAA0ABwAMAAYAAAAKAAwABwAMAAUAAAAKAA0ABwAMAAYAAAAUAAwABwAMAAUAAAAUAA0ABwAMAAYAAAAVAAwABwAMAAUAAAAVAA0ABwAMAAYAAAAWAAwABwAMAAUAAAAWAA0ABwAMAAYAAAA=")
+tile_set = ExtResource("4_o55n4")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Decoration" unique_id=131733727]
+
+[node name="5" type="ParallaxLayer" parent="Decoration/ParallaxBackground" unique_id=955160794]
+
+[node name="Sprite2D" type="Sprite2D" parent="Decoration/ParallaxBackground/5" unique_id=1342087475]
+texture_repeat = 2
+texture = ExtResource("5_63ryy")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="4" type="ParallaxLayer" parent="Decoration/ParallaxBackground" unique_id=57144470]
+
+[node name="Sprite2D" type="Sprite2D" parent="Decoration/ParallaxBackground/4" unique_id=1031723707]
+texture_repeat = 2
+texture = ExtResource("6_wyuaa")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="3" type="ParallaxLayer" parent="Decoration/ParallaxBackground" unique_id=1516552120]
+
+[node name="Sprite2D" type="Sprite2D" parent="Decoration/ParallaxBackground/3" unique_id=1638559794]
+texture_repeat = 2
+texture = ExtResource("7_ttii7")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="2" type="ParallaxLayer" parent="Decoration/ParallaxBackground" unique_id=1817450282]
+
+[node name="Sprite2D" type="Sprite2D" parent="Decoration/ParallaxBackground/2" unique_id=95368659]
+texture_repeat = 2
+texture = ExtResource("8_tqg4o")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="water" type="ParallaxLayer" parent="Decoration/ParallaxBackground" unique_id=509403701]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Decoration/ParallaxBackground/water" unique_id=1556431379]
+sprite_frames = SubResource("SpriteFrames_63ryy")
+autoplay = "default"
+frame_progress = 0.24258848
+centered = false
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Decoration/ParallaxBackground/water" unique_id=1665088691]
+position = Vector2(576, 0)
+sprite_frames = SubResource("SpriteFrames_63ryy")
+autoplay = "default"
+frame_progress = 0.24258848
+centered = false
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Decoration/ParallaxBackground/water" unique_id=934918982]
+position = Vector2(1152, 0)
+sprite_frames = SubResource("SpriteFrames_63ryy")
+autoplay = "default"
+frame_progress = 0.24258848
+centered = false
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Decoration/ParallaxBackground/water" unique_id=1328858004]
+position = Vector2(1728, 0)
+sprite_frames = SubResource("SpriteFrames_63ryy")
+autoplay = "default"
+frame_progress = 0.24258848
+centered = false
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Decoration/ParallaxBackground/water" unique_id=468113544]
+position = Vector2(2304, 0)
+sprite_frames = SubResource("SpriteFrames_63ryy")
+autoplay = "default"
+frame_progress = 0.24258848
+centered = false

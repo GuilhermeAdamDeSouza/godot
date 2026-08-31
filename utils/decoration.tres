@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dmuocyya71n21" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Autumn_entities (16 x 16).png" id="1_7yeo5"]
 [ext_resource type="Texture2D" uid="uid://d348su1b0tffj" path="res://sprites/Seasonal Tilesets/3 - Tropics/Tropics_entities (16 x 16).png" id="2_q16q6"]
 [ext_resource type="Texture2D" uid="uid://dimb8dw12o588" path="res://sprites/Seasonal Tilesets/5 - Misc. universal tiles/House (112 x 96).png" id="3_a1qyp"]
+[ext_resource type="Texture2D" uid="uid://d2ntaaksjlbbm" path="res://sprites/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="4_a1qyp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yj5dr"]
 texture = ExtResource("1_7yeo5")
@@ -75,8 +76,27 @@ texture = ExtResource("3_a1qyp")
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gc348"]
+texture = ExtResource("4_a1qyp")
+1:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+9:1/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+4:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+4:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+9:4/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_yj5dr")
 sources/1 = SubResource("TileSetAtlasSource_tjebh")
 sources/2 = SubResource("TileSetAtlasSource_7keq8")
+sources/3 = SubResource("TileSetAtlasSource_gc348")

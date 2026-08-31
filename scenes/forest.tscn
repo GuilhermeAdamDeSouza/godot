@@ -10,11 +10,20 @@
 [ext_resource type="Texture2D" uid="uid://bwedevduhlcbx" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="8_j3csf"]
 [ext_resource type="Texture2D" uid="uid://dvkpr5h28glsi" path="res://sprites/Seasonal Tilesets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="9_dabdc"]
 [ext_resource type="PackedScene" uid="uid://b2ivj4dyhq64n" path="res://entities/camera_2d.tscn" id="10_3knxq"]
+[ext_resource type="PackedScene" uid="uid://68o7x2b5sgob" path="res://entities/level_end.tscn" id="11_ercsu"]
+[ext_resource type="PackedScene" uid="uid://dkkdlojp4eidp" path="res://scenes/tropical.tscn" id="12_j3csf"]
 
 [node name="forest" type="Node2D" unique_id=872300598]
+metadata/_edit_vertical_guides_ = [1035.0, 769.0]
+metadata/_edit_horizontal_guides_ = [155.0]
 
 [node name="player" parent="." unique_id=870111983 instance=ExtResource("1_0afsd")]
-position = Vector2(56, 73)
+position = Vector2(64, 130)
+
+[node name="Camera2D" parent="." unique_id=2135336072 instance=ExtResource("10_3knxq")]
+position = Vector2(737.0099, 119.411545)
+limit_right = 1035
+limit_bottom = 205
 
 [node name="terrain" type="TileMapLayer" parent="." unique_id=542885017]
 position = Vector2(-1, 16)
@@ -22,7 +31,7 @@ tile_map_data = PackedByteArray("AAAAAAoAAAACAAMAAAAAAAsAAAACAAQAAAABAAoAAAACAAM
 tile_set = ExtResource("2_0afsd")
 
 [node name="decoration" type="TileMapLayer" parent="." unique_id=111374845]
-tile_map_data = PackedByteArray("AAADAAoAAAABAAUAAAAHAAoAAAABAAUAAAANAAoAAAABAAUAAAARAAoAAAABAAUAAAAKAAoAAAABAAUAAAAVAAkAAAABAAEAAAAWAAkAAAABAAEAAAAYAAkAAAABAAEAAAAXAAkAAAABAAEAAAAbAAkAAAAFAAEAAAAaAAkAAAAFAAEAAAAkAAkAAAAFAAEAAAAnAAoAAAAJAAEAAAAoAAoAAAAKAAEAAAApAAoAAAALAAEAAAAqAAoAAAAJAAEAAAArAAoAAAAKAAEAAAAsAAoAAAALAAEAAAAyAAkAAAAFAAEAAAAyAAoAAAAOAAQAAAAzAAkAAAAPAAMAAAA0AAkAAAAQAAMAAAA0AAoAAAAQAAQAAAA1AAkAAAARAAMAAAA2AAkAAAASAAMAAAA2AAoAAAASAAQAAAA5AAkAAAAOAAMAAAA5AAoAAAAOAAQAAAA6AAkAAAAPAAMAAAA7AAkAAAAQAAMAAAA7AAoAAAAQAAQAAAA8AAkAAAARAAMAAAA9AAkAAAASAAMAAAA9AAoAAAASAAQAAAA=")
+tile_map_data = PackedByteArray("AAADAAoAAAABAAUAAAAHAAoAAAABAAUAAAANAAoAAAABAAUAAAARAAoAAAABAAUAAAAKAAoAAAABAAUAAAAVAAkAAAABAAEAAAAWAAkAAAABAAEAAAAYAAkAAAABAAEAAAAXAAkAAAABAAEAAAAbAAkAAAAFAAEAAAAaAAkAAAAFAAEAAAAkAAkAAAAFAAEAAAAnAAoAAAAJAAEAAAAoAAoAAAAKAAEAAAApAAoAAAALAAEAAAAqAAoAAAAJAAEAAAArAAoAAAAKAAEAAAAsAAoAAAALAAEAAAAyAAkAAAAFAAEAAAAyAAoAAAAOAAQAAAAzAAkAAAAPAAMAAAA0AAkAAAAQAAMAAAA0AAoAAAAQAAQAAAA1AAkAAAARAAMAAAA2AAkAAAASAAMAAAA2AAoAAAASAAQAAAA5AAkAAAAOAAMAAAA5AAoAAAAOAAQAAAA6AAkAAAAPAAMAAAA7AAkAAAAQAAMAAAA7AAoAAAAQAAQAAAA8AAkAAAARAAMAAAA9AAkAAAASAAMAAAA9AAoAAAASAAQAAAA/AAoAAwABAAEAAAA/AAkAAwABAAEAAAA/AAgAAwABAAEAAABAAAgAAwABAAEAAABBAAgAAwABAAEAAABBAAkAAwABAAEAAABBAAoAAwABAAEAAABAAAoAAwAHAAEAAABAAAkAAwAHAAEAAAA=")
 tile_set = ExtResource("3_0nboi")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1250767671]
@@ -92,4 +101,8 @@ centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 576, 208)
 
-[node name="Camera2D" parent="." unique_id=1673570123 instance=ExtResource("10_3knxq")]
+[node name="LevelEnd" parent="." unique_id=1419501408 instance=ExtResource("11_ercsu")]
+position = Vector2(1032, 12)
+next_scene = ExtResource("12_j3csf")
+
+[editable path="LevelEnd"]
