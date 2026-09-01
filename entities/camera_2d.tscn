@@ -22,6 +22,7 @@ func buscar_alvo() -> void:
 "
 
 [node name="Camera2D" type="Camera2D" unique_id=2135336072]
+process_callback = 0
 limit_left = 0
 limit_top = -144
 limit_right = 912
