@@ -1,0 +1,70 @@
+[gd_scene format=4 uid="uid://brtpkgu0y3r8g"]
+
+[ext_resource type="TileSet" uid="uid://jc2ulsbtihxw" path="res://tiles/terrain.tres" id="1_2t6s8"]
+[ext_resource type="PackedScene" uid="uid://c2jt1klj78sd" path="res://entities/jogador.tscn" id="2_gtb6u"]
+[ext_resource type="PackedScene" uid="uid://b2ivj4dyhq64n" path="res://entities/camera_2d.tscn" id="3_nhv6a"]
+[ext_resource type="PackedScene" uid="uid://ba8pxhdymdx7m" path="res://entities/zumbi_lento.tscn" id="4_yb5af"]
+[ext_resource type="PackedScene" uid="uid://bgddh7jwy7blv" path="res://entities/zumbi_rapido.tscn" id="5_eq4v2"]
+[ext_resource type="PackedScene" uid="uid://b3ohqvwwurecs" path="res://entities/zumbi_grande.tscn" id="6_qwq5a"]
+[ext_resource type="Texture2D" uid="uid://dfdpjei8cqi3f" path="res://sprites/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" id="7_l0eye"]
+[ext_resource type="Texture2D" uid="uid://d4n0m0rieuk7x" path="res://sprites/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" id="8_ue5hb"]
+[ext_resource type="Texture2D" uid="uid://quwhlkwftept" path="res://sprites/Seasonal Tilesets/4 - Winter World/Background parts/1 - Snowy_foreground_area.png" id="9_vfo8a"]
+
+[node name="combate" type="Node2D" unique_id=1236175122]
+
+[node name="terreno" type="TileMapLayer" parent="." unique_id=1988999555]
+tile_map_data = PackedByteArray("AAABAAsAAwAEAAEAAAACAAsAAwAEAAEAAAADAAsAAwAEAAEAAAAEAAsAAwAEAAEAAAAFAAsAAwAEAAEAAAAGAAsAAwAEAAEAAAAHAAsAAwAEAAEAAAAIAAsAAwAEAAEAAAAJAAsAAwAEAAEAAAAKAAsAAwAEAAEAAAALAAsAAwAEAAEAAAAMAAsAAwAEAAEAAAANAAsAAwAEAAEAAAAOAAsAAwAEAAEAAAAPAAsAAwAEAAEAAAAQAAsAAwAEAAEAAAARAAsAAwAEAAEAAAASAAsAAwAEAAEAAAATAAsAAwAEAAEAAAAUAAsAAwAEAAEAAAAVAAsAAwAEAAEAAAAWAAsAAwAEAAEAAAAXAAsAAwAEAAEAAAAYAAsAAwAEAAEAAAAZAAsAAwAEAAEAAAAaAAsAAwAEAAEAAAAbAAsAAwAEAAEAAAAcAAsAAwAEAAEAAAAdAAsAAwAEAAEAAAAeAAsAAwAEAAEAAAAfAAsAAwAEAAEAAAAgAAsAAwAEAAEAAAAhAAsAAwAEAAEAAAAiAAsAAwAEAAEAAAAjAAsAAwAEAAEAAAAkAAsAAwAEAAEAAAAlAAsAAwAEAAEAAAAmAAsAAwAEAAEAAAAnAAsAAwAEAAEAAAAoAAsAAwAEAAEAAAApAAsAAwAEAAEAAAAqAAsAAwAEAAEAAAArAAsAAwAEAAEAAAAsAAsAAwAEAAEAAAAtAAsAAwAEAAEAAAAuAAsAAwAEAAEAAAAvAAsAAwAEAAEAAAAwAAsAAwAEAAEAAAABAAoAAwAEAAEAAAABAAkAAwAEAAEAAAABAAgAAwAEAAEAAAABAAcAAwAEAAEAAAAwAAoAAwAEAAEAAAAwAAkAAwAEAAEAAAAwAAgAAwAEAAEAAAAwAAcAAwAEAAEAAAAEAAMAAwAEAAEAAAAFAAMAAwAEAAEAAAAGAAMAAwAEAAEAAAAHAAMAAwAEAAEAAAAIAAMAAwAEAAEAAAAJAAMAAwAEAAEAAAAKAAMAAwAEAAEAAAALAAMAAwAEAAEAAAAMAAMAAwAEAAEAAAANAAMAAwAEAAEAAAAOAAMAAwAEAAEAAAAPAAMAAwAEAAEAAAAQAAMAAwAEAAEAAAARAAMAAwAEAAEAAAASAAMAAwAEAAEAAAATAAMAAwAEAAEAAAAUAAMAAwAEAAEAAAAVAAMAAwAEAAEAAAAWAAMAAwAEAAEAAAAXAAMAAwAEAAEAAAAYAAMAAwAEAAEAAAAZAAMAAwAEAAEAAAAaAAMAAwAEAAEAAAAbAAMAAwAEAAEAAAAcAAMAAwAEAAEAAAAdAAMAAwAEAAEAAAAeAAMAAwAEAAEAAAAfAAMAAwAEAAEAAAAgAAMAAwAEAAEAAAAhAAMAAwAEAAEAAAAiAAMAAwAEAAEAAAAjAAMAAwAEAAEAAAAkAAMAAwAEAAEAAAAlAAMAAwAEAAEAAAAmAAMAAwAEAAEAAAAnAAMAAwAEAAEAAAAoAAMAAwAEAAEAAAApAAMAAwAEAAEAAAAqAAMAAwAEAAEAAAArAAMAAwAEAAEAAAAsAAMAAwAEAAEAAAAsAAIAAwAEAAEAAAAsAAEAAwAEAAEAAAAsAAAAAwAEAAEAAAAsAP//AwAEAAEAAAAsAP7/AwAEAAEAAAAEAPv/AwAEAAEAAAAFAPv/AwAEAAEAAAAGAPv/AwAEAAEAAAAHAPv/AwAEAAEAAAAIAPv/AwAEAAEAAAAJAPv/AwAEAAEAAAAKAPv/AwAEAAEAAAALAPv/AwAEAAEAAAAMAPv/AwAEAAEAAAANAPv/AwAEAAEAAAAOAPv/AwAEAAEAAAAPAPv/AwAEAAEAAAAQAPv/AwAEAAEAAAARAPv/AwAEAAEAAAASAPv/AwAEAAEAAAATAPv/AwAEAAEAAAAUAPv/AwAEAAEAAAAVAPv/AwAEAAEAAAAWAPv/AwAEAAEAAAAXAPv/AwAEAAEAAAAYAPv/AwAEAAEAAAAZAPv/AwAEAAEAAAAaAPv/AwAEAAEAAAAbAPv/AwAEAAEAAAAcAPv/AwAEAAEAAAAdAPv/AwAEAAEAAAAeAPv/AwAEAAEAAAAfAPv/AwAEAAEAAAAgAPv/AwAEAAEAAAAhAPv/AwAEAAEAAAAiAPv/AwAEAAEAAAAjAPv/AwAEAAEAAAAkAPv/AwAEAAEAAAAlAPv/AwAEAAEAAAAmAPv/AwAEAAEAAAAnAPv/AwAEAAEAAAAoAPv/AwAEAAEAAAApAPv/AwAEAAEAAAAqAPv/AwAEAAEAAAAqAPr/AwAEAAEAAAAqAPn/AwAEAAEAAAAqAPj/AwAEAAEAAAAqAPf/AwAEAAEAAAAqAPb/AwAEAAEAAAACAAIAAwALAAEAAAADAAIAAwALAAEAAAACAAAAAwALAAEAAAADAAAAAwALAAEAAAACAP7/AwALAAEAAAADAP7/AwALAAEAAAACAPz/AwALAAEAAAADAPz/AwALAAEAAAACAPr/AwALAAEAAAADAPr/AwALAAEAAAACAAQAAwALAAEAAAADAAQAAwALAAEAAAACAAYAAwALAAEAAAADAAYAAwALAAEAAAACAAgAAwALAAEAAAADAAgAAwALAAEAAAACAAoAAwALAAEAAAADAAoAAwALAAEAAAAAAAcAAwAEAAEAAAD//wcAAwAEAAEAAAD+/wcAAwAEAAEAAAA=")
+tile_set = ExtResource("1_2t6s8")
+
+[node name="Camera2D" parent="." unique_id=2135336072 instance=ExtResource("3_nhv6a")]
+limit_top = -200
+limit_right = 911
+limit_bottom = 200
+
+[node name="jogador" parent="." unique_id=1540974418 instance=ExtResource("2_gtb6u")]
+position = Vector2(-7, 78)
+
+[node name="zumbi_lento" parent="." unique_id=1725045414 instance=ExtResource("4_yb5af")]
+position = Vector2(563, 142)
+
+[node name="zumbi_rapido" parent="." unique_id=223186720 instance=ExtResource("5_eq4v2")]
+position = Vector2(604, 7)
+
+[node name="zumbi_grande" parent="." unique_id=58512366 instance=ExtResource("6_qwq5a")]
+position = Vector2(576, -121)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=983312674]
+
+[node name="3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1298758434]
+texture_repeat = 2
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(288, 208)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3" unique_id=360778175]
+texture_repeat = 2
+texture = ExtResource("7_l0eye")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1797930195]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/2" unique_id=523088271]
+texture_repeat = 2
+texture = ExtResource("8_ue5hb")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
+
+[node name="1" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1566231573]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/1" unique_id=946286369]
+texture_repeat = 2
+texture = ExtResource("9_vfo8a")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 576, 208)
