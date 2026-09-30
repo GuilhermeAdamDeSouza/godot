@@ -4,6 +4,9 @@
 [ext_resource type="TileSet" uid="uid://cviuh6ic12kvc" path="res://tiles/decoration.tres" id="2_6dase"]
 [ext_resource type="PackedScene" uid="uid://bvj10qqe6tk8d" path="res://entities/player.tscn" id="3_0wf8c"]
 [ext_resource type="PackedScene" uid="uid://b2ivj4dyhq64n" path="res://entities/camera_2d.tscn" id="4_23kft"]
+[ext_resource type="Texture2D" uid="uid://dfdpjei8cqi3f" path="res://sprites/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" id="5_yivqg"]
+[ext_resource type="Texture2D" uid="uid://d4n0m0rieuk7x" path="res://sprites/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" id="6_y2ttq"]
+[ext_resource type="Texture2D" uid="uid://quwhlkwftept" path="res://sprites/Seasonal Tilesets/4 - Winter World/Background parts/1 - Snowy_foreground_area.png" id="7_8jtd3"]
 
 [node name="Cenario01" type="Node2D" unique_id=1104436860]
 
@@ -23,3 +26,29 @@ limit_left = -15
 limit_top = 0
 limit_right = 1020
 limit_bottom = 208
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=164749440]
+
+[node name="1" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1883502172]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/1" unique_id=405590026]
+texture = ExtResource("5_yivqg")
+centered = false
+
+[node name="2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=2001964075]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/2" unique_id=11102086]
+texture = ExtResource("6_y2ttq")
+centered = false
+
+[node name="3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=305307389]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(288, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3" unique_id=1141535164]
+texture = ExtResource("7_8jtd3")
+centered = false
