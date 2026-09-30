@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dfdpjei8cqi3f" path="res://sprites/Seasonal Tilesets/4 - Winter World/Background parts/3 - Big_mountain_BG.png" id="5_yivqg"]
 [ext_resource type="Texture2D" uid="uid://d4n0m0rieuk7x" path="res://sprites/Seasonal Tilesets/4 - Winter World/Background parts/2 - Smaller_mountains.png" id="6_y2ttq"]
 [ext_resource type="Texture2D" uid="uid://quwhlkwftept" path="res://sprites/Seasonal Tilesets/4 - Winter World/Background parts/1 - Snowy_foreground_area.png" id="7_8jtd3"]
+[ext_resource type="PackedScene" uid="uid://68o7x2b5sgob" path="res://entities/level_end.tscn" id="8_y2ttq"]
+[ext_resource type="PackedScene" uid="uid://cnosv5148aw83" path="res://scenes/cenario_02.tscn" id="9_8jtd3"]
 
 [node name="Cenario01" type="Node2D" unique_id=1104436860]
 
@@ -52,3 +54,7 @@ motion_mirroring = Vector2(288, 0)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/3" unique_id=1141535164]
 texture = ExtResource("7_8jtd3")
 centered = false
+
+[node name="LevelEnd" parent="." unique_id=1419501408 instance=ExtResource("8_y2ttq")]
+position = Vector2(587, 26)
+next_scene = ExtResource("9_8jtd3")
